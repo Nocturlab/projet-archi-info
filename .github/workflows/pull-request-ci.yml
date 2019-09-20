@@ -1,0 +1,14 @@
+name: Issue Reference
+on: [pull_request]
+
+jobs:
+  update_draft_release:
+    runs-on: ubuntu-latest
+    steps:
+      # Drafts your next Release notes as Pull Requests are merged into "master"
+      - name: Add an issue reference
+        uses: kentaro-m/add-an-issue-reference-action@v1.0.0
+        env:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: issue
