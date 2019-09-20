@@ -19,7 +19,3 @@ jobs:
       with:
         name: release-${{ matrix.os }}
         path: ./bin
-    - uses: toolmantim/release-drafter@v5.2.0
-      if: ${GITHUB_REF} == master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
