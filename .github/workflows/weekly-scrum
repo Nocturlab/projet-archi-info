@@ -1,7 +1,7 @@
 name: Weekly Scrum
 on:
   schedule:
-  - cron: 59 * * * *
+  - cron: 50 * * * *
 
 jobs:
   weekly_scrum:
