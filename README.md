@@ -1,6 +1,16 @@
 # README
+
+## Status :
+
+- Server:
+
 [![Actions Status](https://github.com/Nocturlab/projet-archi-info-server/workflows/Build%20Unix/badge.svg)](https://github.com/Nocturlab/projet-archi-info-server/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/nocturlab/projet-archi-info-server/badge)](https://www.codefactor.io/repository/github/nocturlab/projet-archi-info-server)
+
+- Client:
+
+[![Actions Status](https://github.com/Nocturlab/projet-archi-info-client/workflows/Build%20Unix/badge.svg)](https://github.com/Nocturlab/projet-archi-info-client/actions)
+[![CodeFactor](https://www.codefactor.io/repository/github/nocturlab/projet-archi-info-client/badge)](https://www.codefactor.io/repository/github/nocturlab/projet-archi-info-client)
 
 # projet-archi-info
 
