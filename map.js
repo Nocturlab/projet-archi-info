@@ -3,6 +3,34 @@
 // plugin cordova envoie position utilisateur au serveur
 https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/
 
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+//   Retrieve the user position
+    //
+    var onSuccess = function(position) {
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' );
+              
+             console.log(httpGet("http://easy-park.nocturlab.fr/parkings/search/findByUserPos?pos_x="+position.coords.latitude+"&pos_y="+position.coords.longitude+"&range=500&page=1&size=20&sort=id"));
+    };
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+// send user poistion to the server
+
 // Requeter notre api java
 var jsonData = {
     "data": [
